@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kursy</title>
+</head>
+<body>
+    <h1>Lista kursów</h1>
+    <ul>
+        {% for course in courses %}
+        <li>
+            <strong>{{ course.name }}</strong>: {{ course.description }} (Miejsca: {{ course.slots }})
+            <a href="{{ url_for('register', course_id=course.id) }}">Zarejestruj się</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('add_course') }}">Dodaj nowy kurs</a>
+</body>
+</html>
