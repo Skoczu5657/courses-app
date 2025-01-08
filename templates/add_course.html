@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodaj kurs</title>
+</head>
+<body>
+    <h1>Dodaj nowy kurs</h1>
+    <form action="{{ url_for('add_course') }}" method="POST">
+        <label for="name">Nazwa kursu:</label>
+        <input type="text" name="name" required><br>
+        <label for="description">Opis:</label>
+        <input type="text" name="description" required><br>
+        <label for="slots">Miejsca:</label>
+        <input type="number" name="slots" required><br>
+        <button type="submit">Dodaj kurs</button>
+    </form>
+</body>
+</html>
